@@ -6,14 +6,15 @@ chrome.browserAction.onClicked.addListener(function(){
 });
 
 var onPlay = function(){
+    var icon = this.src.indexOf(';(') > -1 ? 'sad' : 'icon64-open';
     chrome.browserAction.setIcon({
-        path: "icon64-open.png"
+        path: icon + '.png'
     });
 };
 
 var onStop = function(){
     chrome.browserAction.setIcon({
-        path: "icon64.png"
+        path: 'icon64.png'
     });
 };
 
